@@ -25,6 +25,7 @@ class AnotherModule extends Instance {
      *  Constructor.
      */
     public function __construct() {
+        // var_dump($this);
     }
 
     /**
