@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+
+  "phpVersion": "5.4",
+  "trailingCommaPHP": true,
+  "braceStyle": "1tbs"
+}

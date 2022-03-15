@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    // Editor
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+
+    // PHP (must be configured)
+    "xdebug.php-pack",
+
+    // Optional
+    "pkief.material-icon-theme"
+  ]
+}
