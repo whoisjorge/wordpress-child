@@ -9,6 +9,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
 
+  // Exclude files from the file tree
   "files.exclude": {
     "node_modules/": true,
     ".editorconfig": true,
