@@ -15,7 +15,7 @@ npm install # or yarn
 
 ## Usage
 
-Simplest as start developing!
+As simple as starting to develop your child theme!
 
 ## Configuration
 
