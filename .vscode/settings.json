@@ -10,13 +10,15 @@
   "editor.formatOnSave": true,
 
   "files.exclude": {
-    // ".editorconfig": true,
-    // ".gitattributes": true,
-    // ".gitignore": true,
-    // ".prettierignore": true,
-    // ".prettierrc": true,
-    // "LICENSE": true,
-    // "package-lock.json": true
-    // "README.md": true,
+    "node_modules/": true,
+    ".editorconfig": true,
+    ".gitattributes": true,
+    ".gitignore": true,
+    ".prettierignore": true,
+    ".prettierrc": true,
+    "LICENSE": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "README.md": true
   }
 }

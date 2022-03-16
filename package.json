@@ -2,15 +2,21 @@
   "name": "wordpress-child",
   "description": "A minimalistic WordPress child theme boilerplate.",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/whoisjorge/wordpress-child.git"
-  },
+  "author": "Jorge Moliner (https://whoisjorge.me)",
+  "license": "GPL-2.0-or-later",
   "keywords": [
     "WordPress",
     "Child",
     "Theme"
   ],
+  "homepage": "https://github.com/whoisjorge/wordpress-child#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whoisjorge/wordpress-child.git"
+  },
+  "bugs": {
+    "url": "https://github.com/whoisjorge/wordpress-child/issues"
+  },
   "private": true,
   "scripts": {
     "format": "prettier --write . --ignore-unknown"

@@ -13,40 +13,9 @@
 npm install # or yarn
 ```
 
-## Example
+## Usage
 
-### Input
-
-<!-- prettier-ignore -->
-```php
-<?php
-array_map(function($arg1,$arg2) use ( $var1, $var2 ) {
-    return $arg1+$arg2/($var+$var2);
-}, array("complex"=>"code","with"=>
-    function() {return "inconsistent";}
-,"formatting"=>"is", "hard" => "to", "maintain"=>true));
-```
-
-### Output
-
-```php
-<?php
-
-array_map(
-  function ($arg1, $arg2) use ($var1, $var2) {
-    return $arg1 + $arg2 / ($var + $var2);
-  },
-  [
-    'complex' => 'code',
-    'with' => function () {
-      return 'inconsistent';
-    },
-    'formatting' => 'is',
-    'hard' => 'to',
-    'maintain' => true,
-  ]
-);
-```
+Simplest as start developing!
 
 ## Configuration
 
@@ -56,22 +25,14 @@ array_map(
 - `ThemeName`
 - `parentthemename`
 
-### Preferred bracet style
+### Development
 
-- "braceStyle": "psr-2"
-- "braceStyle": "1tbs"
-
-### Ignoring code
-
-Use `.prettierignore` to ignore (i.e. not reformat) certain files and folders completely.
-
-Use `// prettier-ignore` comments to ignore parts of files.
+Comment `files.exclude` from `.vscode/settings.json` to have full flexibility of the project files and features.
 
 ### Caveats
 
 - Formatting of files that contain mixed PHP and HTML is still considered unstable, see [plugin-php issues](https://github.com/prettier/plugin-php/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ainline).
-  - Another solution could be [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client).
 
 ## License
 
-See the [LICENSE](LICENSE) file for details.
+This is free software; you can redistribute it and/or modify it under the terms of the [GPL-2.0 License](LICENSE).
