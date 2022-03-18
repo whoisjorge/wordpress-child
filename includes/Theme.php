@@ -24,15 +24,19 @@ class Theme {
 
     /**
      * Initialize the theme modules.
+     * @theme dependency loader
      */
     public function load_modules() {
+        // Core
         include_once THEME_NAME_PATH . '/includes/core/Instance.php';
 
+        // Modules
         require THEME_NAME_PATH . '/includes/modules/CustomPostTypes.php';
-        require THEME_NAME_PATH . '/includes/modules/AnotherModule.php';
+        require THEME_NAME_PATH . '/includes/modules/ExampleModule.php';
 
+        // Admin Modules
         if (is_admin()) {
-            // require THEME_NAME_PATH . '/includes/modules/admin/AdminOnlyModule.php';
+            require THEME_NAME_PATH . '/includes/modules/admin/UserEnd.php';
         }
     }
 

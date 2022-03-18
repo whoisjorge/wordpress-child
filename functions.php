@@ -15,6 +15,7 @@ define('THEME_NAME_VERSION', '1.0.0');
 
 define('THEME_NAME_PATH', get_theme_file_path());
 define('THEME_NAME_PARENT_PATH', get_template_directory());
+define('THEME_NAME_ASSETS', get_stylesheet_directory_uri() . '/assets');
 
 /*
 |--------------------------------------------------------------------------
