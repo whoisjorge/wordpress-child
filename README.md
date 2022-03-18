@@ -19,11 +19,13 @@ As simple as starting to develop your child theme!
 
 ## Configuration
 
-### Replacements
+### 🤖 Replacements
 
-- `THEME_NAME_`
-- `ThemeName`
-- `parentthemename`
+- `THEME_NAME_` - _define()_
+- `ThemeName` - _namespaces_
+- `Theme Name` - _comment headers_
+- `parentthemename` - _your parent-theme name_
+- `textdomain` - _your text domain for i18n_
 
 ### Development
 

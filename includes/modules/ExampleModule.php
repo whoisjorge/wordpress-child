@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
     exit(); // Exit if accessed directly.
 }
 
-class AnotherModule extends Instance {
+class ExampleModule extends Instance {
     /**
      * Initiator.
      */
@@ -26,6 +26,7 @@ class AnotherModule extends Instance {
      */
     public function __construct() {
         // var_dump($this);
+        // add_action('hook', [$this, 'add_module_feature'], 10);
     }
 
     /**
@@ -35,4 +36,4 @@ class AnotherModule extends Instance {
     }
 }
 
-AnotherModule::get_instance();
+ExampleModule::get_instance();
