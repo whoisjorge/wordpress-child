@@ -5,9 +5,6 @@
     "esbenp.prettier-vscode",
 
     // PHP (must be configured)
-    "xdebug.php-pack",
-
-    // Optional
-    "pkief.material-icon-theme"
+    "xdebug.php-pack"
   ]
 }

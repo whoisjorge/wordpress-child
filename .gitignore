@@ -1,7 +1,12 @@
+# Composer
+# /vendor
+# composer.lock
+
+# Node
 /node_modules
-/vendor
 package-lock.json
 yarn.lock
-composer.lock
+
+# OS
 .DS_Store
 Thumbs.db
