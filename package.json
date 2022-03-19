@@ -19,12 +19,16 @@
   },
   "private": true,
   "scripts": {
-    "setup": "echo \"Your Child Theme is now ready (not really yet)!\" && exit",
+    "setup": "node setup.js",
     "format": "prettier --write . --ignore-unknown"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.18.3",
     "glob": "^7.2.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "pretty-error": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
