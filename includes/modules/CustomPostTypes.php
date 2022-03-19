@@ -56,7 +56,6 @@ class CustomPostType extends Instance {
             'label' => __('Post Type', 'textdomain'),
             'description' => __('Post Type Description', 'textdomain'),
             'labels' => $labels,
-            'supports' => false,
             'taxonomies' => ['category', 'post_tag'],
             'hierarchical' => false,
             'public' => true,
