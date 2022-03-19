@@ -17,7 +17,7 @@ npm install # or yarn
 
 ## 🤖 Initial setup
 
-Edit **`project.json`** file on root with your Child Theme variables and execute:
+Edit **`theme.json`** file on root with your child theme variables and execute:
 
 ```sh
 npm run setup # or yarn setup
@@ -25,7 +25,7 @@ npm run setup # or yarn setup
 
 ## Configuration
 
-### **_`./project.json`_**
+### **_`./theme.json`_**
 
 ```json
 {
@@ -46,6 +46,11 @@ npm run setup # or yarn setup
 
 - `@prettier/plugin-php` - Formatting of files that contain mixed PHP and HTML is still considered unstable, see [plugin-php issues](https://github.com/prettier/plugin-php/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ainline).
 
+## Documentation
+
+- [Official WordPress Developer Resources](https://developer.wordpress.org/)
+- [PHP Docs](https://docs.phpdoc.org/guide/references/phpdoc/tags/index.html#tag-reference)
+
 ## License
 
-This is free software; you can redistribute it and/or modify it under the terms of the [GPL-2.0 License](LICENSE).
+This is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](LICENSE).

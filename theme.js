@@ -1,14 +1,14 @@
 const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
-var project = require('./project.json');
+var project = require('./theme.json');
 
 require('pretty-error').start();
 
 /**
  * This script is ran to execute all custom variable replacements of the child
  * theme in once. Example: npm run setup
- * @async
+ *
  * @return {Promise<void>}
  */
 
@@ -32,6 +32,7 @@ glob(
       'LICENSE',
       'node_modules/**',
       'screenshot.png',
+      'composer.lock',
       'package-lock.json',
       'yarn.lock',
     ],
