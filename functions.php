@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme_Name.
+ * Theme_Name Child Theme functions and definitions.
  *
  * @version 1.0.0
  * @author Author <email>

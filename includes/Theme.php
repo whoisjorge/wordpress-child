@@ -1,30 +1,41 @@
 <?php
 namespace ThemeName;
 
+/**
+ * Initializes the Theme.
+ *
+ * @package ThemeName
+ */
+
 if (!defined('ABSPATH')) {
     exit(); // Exit if accessed directly.
 }
 
 class Theme {
     /**
-     * Holds the theme instance.
+     * Holds the Child Theme instance.
      */
     public static $instance = null;
 
     /**
-     * Ensures only one instance of the Theme class is loaded or can be loaded.
+     * Ensures only one instance of the Child Theme class is loaded or can be loaded.
      */
     public static function instance() {
         if (is_null(self::$instance)) {
             self::$instance = new self();
         }
-
         return self::$instance;
     }
 
     /**
-     * Initialize the theme modules.
-     * @theme dependency loader
+     * Load the child theme's text domain.
+     */
+    public function load_textdomain() {
+        add_action('after_setup_theme', [$this, 'add_child_theme_textdomain']);
+    }
+
+    /**
+     * Load required theme modules.
      */
     public function load_modules() {
         // Core
@@ -34,21 +45,28 @@ class Theme {
         require THEME_NAME_PATH . '/includes/modules/CustomPostTypes.php';
         require THEME_NAME_PATH . '/includes/modules/ExampleModule.php';
 
-        // Admin Modules
+        // Admin
         if (is_admin()) {
-            require THEME_NAME_PATH . '/includes/modules/admin/UserEnd.php';
+            require THEME_NAME_PATH . '/includes/admin/AdminFrontend.php';
         }
+    }
+
+    /**
+     * Declare textdomain for this child theme and load the translated strings.
+     * Translations can be added to the ./languages directory.
+     * @link https://developer.wordpress.org/reference/functions/load_child_theme_textdomain/
+     */
+    public static function add_child_theme_textdomain() {
+        load_child_theme_textdomain('textdomain', get_stylesheet_directory() . '/languages');
     }
 
     /**
      * Theme constructor.
      */
-    private function __construct() {
+    public function __construct() {
+        $this->load_textdomain();
         $this->load_modules();
     }
 }
 
-/**
- * Init Theme & Load Modules!
- */
 Theme::instance();

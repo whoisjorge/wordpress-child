@@ -1,1 +1,3 @@
+# Controls end-of-line normalization
+# https://github.com/git/git/blob/master/Documentation/RelNotes/2.10.0.txt#L248
 * text=auto eol=lf

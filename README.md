@@ -1,6 +1,6 @@
 # wordpress-child
 
-> A minimalistic WordPress child theme boilerplate with basic setup of VSCode and Prettier to enforce a consistent coding style for the PHP language.
+> An intuitive WordPress child theme boilerplate with basic setup of VSCode and Prettier to enforce a consistent coding style for the PHP language.
 
 ## Requirements
 
