@@ -25,7 +25,7 @@ npm run setup # or yarn setup
 
 ## Configuration
 
-**_`./project.json`_**
+### **_`./project.json`_**
 
 ```json
 {
@@ -36,6 +36,11 @@ npm run setup # or yarn setup
   "ThemeName": "Namespaces"
 }
 ```
+
+### Ignoring code:
+
+1. `.prettierignore` to ignore certain files and/or folders completely.
+2. `// prettier-ignore` comments to ignore parts of files.
 
 ## Caveats
 
