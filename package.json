@@ -1,6 +1,6 @@
 {
   "name": "wordpress-child",
-  "description": "A minimalistic WordPress child theme boilerplate.",
+  "description": "An open-source WordPress starter child theme.",
   "version": "1.0.0",
   "author": "Jorge Moliner (https://whoisjorge.me)",
   "license": "GPL-2.0-or-later",
@@ -19,6 +19,7 @@
   },
   "private": true,
   "scripts": {
+    "setup": "echo \"Your Child Theme is now ready (not really yet)!\" && exit",
     "format": "prettier --write . --ignore-unknown"
   },
   "devDependencies": {
