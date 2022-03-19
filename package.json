@@ -20,7 +20,8 @@
   "private": true,
   "scripts": {
     "setup": "node setup.js",
-    "format": "prettier --write . --ignore-unknown"
+    "format": "prettier --write . --ignore-unknown",
+    "clean": "rm -rf removeevrythingbutthechildtheme.todo"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.18.3",
