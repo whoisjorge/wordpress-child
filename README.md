@@ -7,33 +7,39 @@
 - [Node](https://nodejs.org/) (_LTS recommended_)
 - [VSCode](https://code.visualstudio.com/) (_with recommended extensions installed_)
 
-## Install
+## Installation
+
+To start using all the tools you need to install the necessary Node.js dependencies:
 
 ```sh
 npm install # or yarn
 ```
 
-## Usage
+## 🤖 Initial setup
 
-As simple as starting to develop your child theme!
+Edit **`project.json`** file on root with your Child Theme variables and execute:
+
+```sh
+npm run setup # or yarn setup
+```
 
 ## Configuration
 
-### 🤖 Replacements
+**_`./project.json`_**
 
-- `THEME_NAME_` - _define()_
-- `ThemeName` - _namespaces_
-- `Theme Name` - _comment headers_
-- `parentthemename` - _your parent-theme name_
-- `textdomain` - _your text domain for i18n_
+```json
+{
+  "parentthemename": "The name of the parent-theme",
+  "textdomain": "Theme text domain for i18n",
+  "Theme_Name": "It appears on code comment's headers",
+  "THEME_NAME_": "Global variables",
+  "ThemeName": "Namespaces"
+}
+```
 
-### Development
+## Caveats
 
-Comment `files.exclude` from `.vscode/settings.json` to have full flexibility of the project files and features.
-
-### Caveats
-
-- Formatting of files that contain mixed PHP and HTML is still considered unstable, see [plugin-php issues](https://github.com/prettier/plugin-php/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ainline).
+- `@prettier/plugin-php` - Formatting of files that contain mixed PHP and HTML is still considered unstable, see [plugin-php issues](https://github.com/prettier/plugin-php/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ainline).
 
 ## License
 

@@ -75,7 +75,7 @@ class UserEnd extends Instance {
      */
     public static function footer_text_version() {
         return sprintf(
-            __('<small>Theme Name %s — <span style="vertical-align:sub">%s</span> %s</small>'),
+            __('<small>Theme_Name %s — <span style="vertical-align:sub">%s</span> %s</small>'),
             THEME_NAME_VERSION,
             file_get_contents(THEME_NAME_PATH . '/assets/wordpress.svg'),
             get_bloginfo('version', 'display')

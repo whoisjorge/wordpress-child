@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme Name.
+ * Theme_Name.
  *
  * @version 1.0.0
  * @author Author <email>
