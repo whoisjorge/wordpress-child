@@ -1,10 +1,10 @@
 {
   "recommendations": [
-    // Editor
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
+    "ikappas.phpcs",
+    "persoderlind.vscode-phpcbf",
 
-    // PHP (must be configured)
     "xdebug.php-pack"
   ]
 }

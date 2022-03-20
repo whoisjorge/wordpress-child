@@ -1,26 +1,28 @@
-const glob = require('glob');
-const path = require('path');
-const fs = require('fs');
-var project = require('./theme.json');
+const path = require('path')
+const fs = require('fs')
+const project = require('./theme.json')
 
-require('pretty-error').start();
+const glob = require('glob')
+require('pretty-error').start()
 
 /**
- * This script is ran to execute all custom variable replacements of the child
- * theme in once. Example: npm run setup
+ * This script is ran to execute all custom variable and textdomain
+ * replacements of the child theme in once. Overwrites project files
+ * based on ./theme.json configuration.
  *
+ * @example npm run setup
  * @return {Promise<void>}
  */
-
 glob(
   /*
-   * Target all files pattern.
-   * https://github.com/isaacs/node-glob#glob-primer
+   * {String} Pattern to be matched (target all files)
+   *          https://github.com/isaacs/node-glob#glob-primer
    */
   '**/*.*',
 
   /*
-   * Add a pattern or an array of glob patterns to exclude matches.
+   * {Object} Options (exclude matches)
+   *          https://github.com/isaacs/node-glob#options
    */
   {
     ignore: [
@@ -28,9 +30,11 @@ glob(
       'project.json', // The project's data
       'assets/**',
       'README.md',
+      // 'composer.json',
       'package.json',
       'LICENSE',
       'node_modules/**',
+      'vendor/**',
       'screenshot.png',
       'composer.lock',
       'package-lock.json',
@@ -38,20 +42,23 @@ glob(
     ],
   },
 
-  /*
-   * Execute the function.
+  /**
+   * Callback function.
+   *
+   * @param {Array<String>} filesArray filenames found matching the pattern.
    */
   function (err, filesArray) {
-    if (err) throw err;
+    if (err) throw err
+    // console.log(filesArray)
 
     filesArray.forEach((fileName, index, array) => {
-      /**
+      /*
        * Read every file and return the content of each.
        */
       fs.readFile(fileName, 'utf8', (err, fileContent) => {
-        if (err) throw err;
+        if (err) throw err
 
-        /**
+        /*
          * Replace matched search values on each file.
          * @example replace(searchValue, newValue)
          */
@@ -60,15 +67,15 @@ glob(
           .replace(/ThemeName/g, project.ThemeName)
           .replace(/Theme_Name/g, project.Theme_Name)
           .replace(/parentthemename/g, project.parentthemename)
-          .replace(/textdomain/g, project.textdomain);
+          .replace(/textdomain/g, project.textdomain)
 
-        /**
+        /*
          * Rewrite values and save the new files.
          */
         fs.writeFile(fileName, replace, 'utf8', function (err) {
-          if (err) throw err;
-        });
-      });
-    });
+          if (err) throw err
+        })
+      })
+    })
   }
-);
+)

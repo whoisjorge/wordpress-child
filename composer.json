@@ -1,0 +1,35 @@
+{
+  "name": "whoisjorge/wordpress-child",
+  "description": "An open-source WordPress starter child theme.",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Contributors",
+      "homepage": "https://github.com/whoisjorge/wordpress-child/graphs/contributors"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Child",
+    "Theme"
+  ],
+  "homepage": "https://github.com/whoisjorge/wordpress-child",
+  "scripts": {
+    "phpcs:version": "phpcs -- --version",
+    "phpcs:cs": "phpcs -- --i"
+  },
+  "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.6",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+    "wp-coding-standards/wpcs": "^2.3"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
