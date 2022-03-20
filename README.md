@@ -1,31 +1,38 @@
 # wordpress-child
 
-> An intuitive WordPress child theme boilerplate with basic setup of VSCode and Prettier to enforce a consistent coding style for the PHP language.
+> An intuitive WordPress child theme boilerplate with basic setup of VSCode, Prettier and CodeSniffer to enforce a consistent HTML, CSS, JavaScript & PHP coding styles and also taking care of the WordPress coding conventions.
 
 ## Requirements
 
+- [Composer](https://getcomposer.org/) (_PHP >=7.4_)
 - [Node](https://nodejs.org/) (_LTS recommended_)
 - [VSCode](https://code.visualstudio.com/) (_with recommended extensions installed_)
 
 ## Installation
 
-To start using all the tools you need to install the necessary Node.js dependencies:
+To start using all the project's tools you need to install the necessary dependencies with Node.js and Composer:
 
 ```sh
-npm install # or yarn
+npm install
 ```
-
-## 🤖 Initial setup
-
-Edit **`theme.json`** file on root with your child theme variables and execute:
 
 ```sh
-npm run setup # or yarn setup
+composer install
 ```
+
+## Initial Setup
+
+Edit the [**`theme.json`**](./theme.json) file on project's root with your child theme variables and execute:
+
+```sh
+npm run setup
+```
+
+The child theme is ready **_— Happy coding!_** 🤖
 
 ## Configuration
 
-### **_`./theme.json`_**
+### `theme.json`
 
 ```json
 {
@@ -37,19 +44,39 @@ npm run setup # or yarn setup
 }
 ```
 
-### Ignoring code:
+### PHP 7+
 
-1. `.prettierignore` to ignore certain files and/or folders completely.
-2. `// prettier-ignore` comments to ignore parts of files.
+Set the path to a PHP 7+ executable in your VSCode **`settings.json`** or in the workspace, example:
 
-## Caveats
+```json
+{
+  "php.executablePath": "/Applications/XAMPP/xamppfiles/bin/php"
+}
+```
 
-- `@prettier/plugin-php` - Formatting of files that contain mixed PHP and HTML is still considered unstable, see [plugin-php issues](https://github.com/prettier/plugin-php/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ainline).
+## Developer
 
-## Documentation
+- 💬 If you have a **question or suggestion** leave a message on [Issues](/issues) section.
+- 🐞 You can open a [Pull Request](/pulls) to **add new features** or **fix a bug**.
 
+### Known Issues
+
+Unintended behavior using MacOS with built-in PHP (php@7.4 should fix the following on VSCode extensions):
+
+- `phpcs` extension doesn't lint correctly (_PHP 8.1_)
+- `phpcbf` extension doesn't format using WPCS sniffs (_PHP 8.1_)
+
+### Useful Documentation
+
+> ~~📄 The project **documentation** is available at ...~~
+
+- [Prettier configuration](https://prettier.io/docs/en/options.html)
+- [PHP_CodeSniffer repository](https://github.com/squizlabs/PHP_CodeSniffer)
+- [WordPress Coding Standards for PHP_CodeSniffer](https://github.com/WordPress/WordPress-Coding-Standards)
+- [phpcs extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
+- [phpcbf extension for VSCode](https://marketplace.visualstudio.com/items?itemName=persoderlind.vscode-phpcbf)
 - [Official WordPress Developer Resources](https://developer.wordpress.org/)
-- [PHP Docs](https://docs.phpdoc.org/guide/references/phpdoc/tags/index.html#tag-reference)
+- [phpDocumentor](https://docs.phpdoc.org/guide/references/phpdoc/tags/index.html#tag-reference)
 
 ## License
 
