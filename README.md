@@ -56,8 +56,8 @@ Set the path to a PHP 7+ executable in your VSCode **`settings.json`** or in the
 
 ## Developer
 
-- 💬 If you have a **question or suggestion** leave a message on [Issues](issues) section.
-- 🐞 You can open a [Pull Request](pulls) to **add new features** or **fix a bug**.
+- 💬 If you have a **question or suggestion** leave a message on [Issues](https://github.com/whoisjorge/wordpress-child/issues) section.
+- 🐞 You can open a [Pull Request](https://github.com/whoisjorge/wordpress-child/pulls) to **add new features** or **fix a bug**.
 
 ### Known Issues
 
