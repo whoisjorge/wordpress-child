@@ -24,7 +24,6 @@
     "clean": "rm -rf removeevrythingbutthechildtheme.todo"
   },
   "devDependencies": {
-    "@prettier/plugin-php": "^0.18.3",
     "glob": "^7.2.0",
     "prettier": "^2.5.1",
     "pretty-error": "^4.0.0"
