@@ -17,7 +17,7 @@
   "homepage": "https://github.com/whoisjorge/wordpress-child",
   "scripts": {
     "phpcs:version": "phpcs -- --version",
-    "phpcs:cs": "phpcs -- --i"
+    "phpcs:cs": "phpcs -- -i"
   },
   "require": {
     "php": ">=7.4"
