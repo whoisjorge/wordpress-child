@@ -1,6 +1,6 @@
 # wordpress-child
 
-> An intuitive WordPress child theme boilerplate with basic setup of VSCode, Prettier and CodeSniffer to enforce a consistent HTML, CSS, JavaScript & PHP coding styles and also taking care of the WordPress coding conventions.
+> An intuitive WordPress child theme boilerplate with basic setup of VSCode, Prettier and CodeSniffer to enforce a consistent HTML, CSS, JavaScript & PHP coding styles taking care of the WordPress coding conventions.
 
 ## Requirements
 
