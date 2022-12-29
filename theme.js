@@ -66,8 +66,8 @@ glob(
           .replace(/THEME_NAME_/g, project.THEME_NAME_)
           .replace(/ThemeName/g, project.ThemeName)
           .replace(/Theme_Name/g, project.Theme_Name)
-          .replace(/parentthemename/g, project.parentthemename)
-          .replace(/textdomain/g, project.textdomain)
+          .replace(/parent_theme_name/g, project.parent_theme_name)
+          .replace(/TextDomain/g, project.TextDomain)
 
         /*
          * Rewrite values and save the new files.

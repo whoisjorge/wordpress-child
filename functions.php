@@ -44,14 +44,14 @@ define( 'THEME_NAME_ASSETS_URI', get_stylesheet_directory_uri() . '/assets' );
 */
 
 if ( ! version_compare( PHP_VERSION, THEME_NAME_VERSION_REQUIRED_PHP, '>=' ) ) {
-	add_action( 'admin_notices', 'textdomain_fail_php_version' );
+	add_action( 'admin_notices', 'TextDomain_fail_php_version' );
 } elseif ( ! version_compare( get_bloginfo( 'version' ), THEME_NAME_VERSION_REQUIRED_WP, '>=' ) ) {
-	add_action( 'admin_notices', 'textdomain_fail_wp_version' );
+	add_action( 'admin_notices', 'TextDomain_fail_wp_version' );
 } else {
 	/**
 	 * 🚀 The child theme is running !
 	 */
-	require THEME_NAME_PATH . '/includes/theme.php';
+	require THEME_NAME_PATH . '/includes/Theme.php';
 }
 
 /*
@@ -67,12 +67,12 @@ if ( ! version_compare( PHP_VERSION, THEME_NAME_VERSION_REQUIRED_PHP, '>=' ) ) {
 |
 */
 
-function textdomain_fail_php_version() {
+function TextDomain_fail_php_version() {
 	$message = sprintf(
 		/* translators: %s: PHP version */
 		__(
 			'<strong>Error:</strong> PHP version %s+ is required and you are using an earlier version — The child theme is currently NOT RUNNING.',
-			'textdomain'
+			'TextDomain'
 		),
 		THEME_NAME_VERSION_REQUIRED_PHP
 	);
@@ -81,12 +81,12 @@ function textdomain_fail_php_version() {
 	echo wp_kses_post( $html_message );
 }
 
-function textdomain_fail_wp_version() {
+function TextDomain_fail_wp_version() {
 	$message = sprintf(
 		/* translators: %s: WordPress version */
 		__(
 			'<strong>Error:</strong> WordPress version %s+ is required and you are using an earlier version — The child theme is currently NOT RUNNING.',
-			'textdomain'
+			'TextDomain'
 		),
 		THEME_NAME_VERSION_REQUIRED_WP
 	);

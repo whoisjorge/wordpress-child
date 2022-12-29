@@ -41,11 +41,11 @@ class Theme {
 	 * Cloning or unserializing instances of the class is forbidden.
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Something went wrong.', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Something went wrong.', 'TextDomain' ), '1.0.0' );
 	}
 
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Something went wrong.', 'textdomain' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Something went wrong.', 'TextDomain' ), '1.0.0' );
 	}
 
 	/**
@@ -79,7 +79,7 @@ class Theme {
 	 * @link https://developer.wordpress.org/reference/functions/load_child_theme_textdomain/
 	 */
 	public static function add_child_theme_textdomain() {
-		load_child_theme_textdomain( 'textdomain', get_stylesheet_directory() . '/languages' );
+		load_child_theme_textdomain( 'TextDomain', get_stylesheet_directory() . '/languages' );
 	}
 
 	/**

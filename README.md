@@ -36,8 +36,8 @@ The child theme is ready **_— Happy coding!_** 🤖
 
 ```json
 {
-  "parentthemename": "The name of the parent-theme",
-  "textdomain": "Theme text domain for i18n",
+  "parent_theme_name": "The name of the parent-theme",
+  "TextDomain": "Theme text domain for i18n",
   "Theme_Name": "It appears on code comment's headers",
   "THEME_NAME_": "Global variables",
   "ThemeName": "Namespaces"

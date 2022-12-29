@@ -1,6 +1,6 @@
 {
-  "parentthemename": "generatepress",
-  "textdomain": "mythemetextdomain",
+  "parent_theme_name": "generatepress",
+  "TextDomain": "mythemetextdomain",
   "Theme_Name": "My Theme",
   "THEME_NAME_": "MY_THEME_",
   "ThemeName": "MyTheme"

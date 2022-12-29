@@ -25,7 +25,7 @@ class AdminFrontend extends Instance {
 	 */
 	public static function delete_editor_menu_items() {
 		if ( current_user_can( 'editor' ) ) {
-			remove_menu_page( 'tools.php' );
+			// remove_menu_page( 'tools.php' );
 			// remove_menu_page('edit.php?post_type=elementor_library');
 			// remove_menu_page('envato-elements');
 			// remove_menu_page('jet-engine');
@@ -40,7 +40,7 @@ class AdminFrontend extends Instance {
 	public static function footer_text_developed_by() {
 		$text = sprintf(
 			/* translators: %s: Company URL */
-			__( 'Developed by <a href="%s">Company Name</a>', 'textdomain' ),
+			__( 'Developed by <a href="%s">Company Name</a>', 'TextDomain' ),
 			__( 'https://' )
 		);
 
