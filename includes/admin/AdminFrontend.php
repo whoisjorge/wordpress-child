@@ -24,12 +24,10 @@ class AdminFrontend extends Instance {
 	 * @link https://developer.wordpress.org/reference/functions/remove_menu_page/
 	 */
 	public static function delete_editor_menu_items() {
-		if ( current_user_can( 'editor' ) ) {
-			// remove_menu_page( 'tools.php' );
-			// remove_menu_page('edit.php?post_type=elementor_library');
-			// remove_menu_page('envato-elements');
-			// remove_menu_page('jet-engine');
-		}
+		remove_menu_page( 'tools.php' );
+		// remove_menu_page('edit.php?post_type=elementor_library');
+		// remove_menu_page('envato-elements');
+		// remove_menu_page('jet-engine');
 	}
 
 	/**
@@ -66,21 +64,29 @@ class AdminFrontend extends Instance {
 	}
 
 	/**
+	 * Registers the css styles and js scripts for the admin dashboard.
+	 * @since 1.0.0
+	 * @link https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts/
+	 */
+	public static function enqueue_admin_frontend_style() {
+		wp_register_style( 'admin_frontend_css', THEME_NAME_ASSETS_URI . '/admin.css', false, THEME_NAME_VERSION );
+		wp_enqueue_style( 'admin_frontend_css' );
+	}
+
+	/**
 	 * Constructor.
 	 */
 	public function __construct() {
-		add_action( 'admin_init', array( $this, 'delete_editor_menu_items' ) );
-
 		// Check if the hooks are not set by other plugin
 		if ( ! has_filter( 'admin_footer_text' ) && ! has_filter( 'update_footer' ) ) {
-			wp_enqueue_style(
-				'admin_frontend',
-				THEME_NAME_ASSETS_URI . '/admin.css',
-				array(),
-				THEME_NAME_VERSION
-			);
 			add_filter( 'admin_footer_text', array( $this, 'footer_text_developed_by' ), 11 );
 			add_filter( 'update_footer', array( $this, 'footer_text_version' ), 11 );
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_frontend_style' ) );
+		}
+
+		// Check if the user has the Editor role
+		if ( current_user_can( 'editor' ) ) {
+			add_action( 'admin_init', array( $this, 'delete_editor_menu_items' ) );
 		}
 	}
 }

@@ -2,6 +2,7 @@
   "recommendations": [
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
+
     "ikappas.phpcs",
     "persoderlind.vscode-phpcbf",
 
