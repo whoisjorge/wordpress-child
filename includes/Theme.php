@@ -15,8 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Theme {
 
 	/**
-	 * Instance.
-	 *
 	 * Holds the Child Theme instance.
 	 *
 	 * @var ChildTheme
@@ -24,8 +22,6 @@ class Theme {
 	public static $instance = null;
 
 	/**
-	 * Instance.
-	 *
 	 * Ensures only one instance of the Child Theme class is loaded or can be loaded.
 	 *
 	 * @return ChildTheme An instance of the class.
