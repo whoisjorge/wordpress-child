@@ -33,17 +33,19 @@
    * Uncommented are files excluded from the file tree.
    */
   "files.exclude": {
-    // "theme.js": true,
-    // "composer.json": true,
-    // "package.json": true,
+    // "LICENSE": true
     // "README.md": true,
+
+    // "theme.js": true,
 
     // ".editorconfig": true,
     // ".gitattributes": true,
     // ".gitignore": true,
     // ".prettierignore": true,
     // ".prettierrc": true,
-    // "LICENSE": true
+
+    // "composer.json": true,
+    // "package.json": true,
 
     // "node_modules/": true,
     // "composer.lock": true,

@@ -5,7 +5,7 @@
 ## Requirements
 
 - [Composer](https://getcomposer.org/) (_PHP >=7.4_)
-- [Node](https://nodejs.org/) (_LTS recommended_)
+- [Node](https://nodejs.org/) (_LTS >=14 recommended_)
 - [VSCode](https://code.visualstudio.com/) (_with recommended extensions installed_)
 
 ## Installation
@@ -52,6 +52,11 @@ Set the path to a PHP 7+ executable in your VSCode **`settings.json`** or in the
 {
   "php.executablePath": "/Applications/XAMPP/xamppfiles/bin/php"
 }
+
+{
+  "php.executablePath": "/usr/local/bin/php",
+  "php.validate.executablePath": "/usr/local/bin/php",
+}
 ```
 
 ## Developer
@@ -65,6 +70,15 @@ Unintended behavior using MacOS with built-in PHP (php@7.4 should fix the follow
 
 - `phpcs` extension doesn't lint correctly (_PHP 8.1_)
 - `phpcbf` extension doesn't format using WPCS sniffs (_PHP 8.1_)
+
+```sh
+# Switching between PHP versions (homebrew macOS)
+brew install php@7.4
+
+brew unlink php
+
+brew link php@7.4
+```
 
 ### Useful Documentation
 
