@@ -57,7 +57,7 @@ class AdminFrontend extends Instance {
 	 * @link https://developer.wordpress.org/reference/hooks/admin_footer/
 	 */
 	public static function footer_text_version() {
-		$wp_logo    = file_get_contents( THEME_NAME_PATH . '/assets/wordpress.svg' );
+		$wp_logo    = file_get_contents( THEME_NAME_PATH . '/assets/admin/wordpress.svg' );
 		$wp_version = get_bloginfo( 'version', 'display' );
 
 		return '<small>Theme_Name ' . THEME_NAME_VERSION . ' — <span style="vertical-align:sub">' . $wp_logo . '</span> ' . $wp_version . '</small>';
@@ -69,7 +69,7 @@ class AdminFrontend extends Instance {
 	 * @link https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts/
 	 */
 	public static function enqueue_admin_frontend_style() {
-		wp_register_style( 'admin_frontend_css', THEME_NAME_ASSETS_URI . '/admin.css', false, THEME_NAME_VERSION );
+		wp_register_style( 'admin_frontend_css', THEME_NAME_ASSETS_URI . '/admin/admin.css', false, THEME_NAME_VERSION );
 		wp_enqueue_style( 'admin_frontend_css' );
 	}
 

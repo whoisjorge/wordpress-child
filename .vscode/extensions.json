@@ -3,7 +3,7 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
 
-    "ikappas.phpcs",
+    "shevaua.phpcs",
     "persoderlind.vscode-phpcbf",
 
     "xdebug.php-pack"
