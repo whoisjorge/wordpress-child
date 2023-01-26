@@ -66,18 +66,18 @@ Set the path to a PHP 7+ executable in your VSCode **`settings.json`** or in the
 
 ### Known Issues
 
-Unintended behavior using MacOS with built-in PHP (php@7.4 should fix the following on VSCode extensions):
+Unintended behavior using MacOS with built-in PHP (php@7.4 || php@8.0 should fix the following on VSCode extensions):
 
 - `phpcs` extension doesn't lint correctly (_PHP 8.1_)
 - `phpcbf` extension doesn't format using WPCS sniffs (_PHP 8.1_)
 
 ```sh
 # Switching between PHP versions (homebrew macOS)
-brew install php@7.4
+brew install php@8.0
 
 brew unlink php
 
-brew link php@7.4
+brew link php@8.0
 ```
 
 ### Useful Documentation

@@ -1,35 +1,35 @@
 <?php
 namespace ThemeName;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Exit if accessed directly.
+}
+
 /**
  * The main handler class responsible for initialization. It registers all the
  * components required to run the theme.
  *
  * @package ThemeName
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	die; // Exit if accessed directly.
-}
-
 class Theme {
 
 	/**
 	 * Holds the Child Theme instance.
 	 *
-	 * @var ChildTheme
+	 * @var Theme
 	 */
 	public static $instance = null;
 
 	/**
 	 * Ensures only one instance of the Child Theme class is loaded or can be loaded.
 	 *
-	 * @return ChildTheme An instance of the class.
+	 * @return Theme An instance of the class.
 	 */
 	public static function instance() {
 		if ( is_null( self::$instance ) ) {
 			self::$instance = new self();
 		}
+
 		return self::$instance;
 	}
 
