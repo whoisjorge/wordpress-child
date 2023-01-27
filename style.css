@@ -10,3 +10,50 @@
   License URI:  http://www.gnu.org/licenses/gpl-3.0.html
   Text Domain:  TextDomain
 */
+
+body {
+  overscroll-behavior-y: none;
+}
+
+/* ----------------------------------------------------------------------------
+  CSS pseudo-element that applies styles to the part of a document that has
+  been highlighted by the user (such as clicking and dragging the mouse across
+  text), see: https://developer.mozilla.org/docs/Web/CSS/::selection
+---------------------------------------------------------------------------- */
+
+/*
+::selection {
+  color: var(--color-foreground);
+  background-color: var(--color-selection);
+}
+
+::-moz-selection {
+  color: var(--color-foreground);
+  background-color: var(--color-selection);
+}
+*/
+
+/*-----------------------------------------------------------------------------
+  CSS feature to detect if the user has requested that the system minimize the
+  amount of non-essential movement like transitions or animations, see:
+  https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-motion
+-----------------------------------------------------------------------------*/
+
+/* @media screen and (prefers-reduced-motion: reduce) {
+  * {
+    transition: 0s !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} */
+
+/*-----------------------------------------------------------------------------
+  Quick Fixes
+-----------------------------------------------------------------------------*/
