@@ -1,19 +1,18 @@
 <?php
 namespace ThemeName;
 
-use ThemeName\Core\Instance;
-
-/**
- * Register Custom Post Types.
- *
- * @package ThemeName
- */
+use ThemeName\Core\Instance as ModuleInstance;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-class CustomPostType extends Instance {
+/**
+ * Registers Custom Post Types.
+ *
+ * @package ThemeName
+ */
+class CustomPostType extends ModuleInstance {
 	public static function get_instance() {
 		return parent::instance();
 	}
@@ -22,7 +21,7 @@ class CustomPostType extends Instance {
 	 * Functions
 	 * @example
 	 */
-	public static function add_custom_post_type() {
+	public function add_custom_post_type() {
 		// From: https://generatewp.com/post-type/
 		$labels = array(
 			'name'                  => _x( 'Custom Post Type Example', 'Post Type General Name', 'TextDomain' ),

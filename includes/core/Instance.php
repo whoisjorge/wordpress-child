@@ -23,7 +23,7 @@ abstract class Instance {
 	 *
 	 * @var Instance
 	 */
-	private static $_instances = array();
+	protected static $_instances = array();
 
 	/**
 	 * Instance.

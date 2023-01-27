@@ -79,7 +79,7 @@ class Theme {
 	}
 
 	/**
-	 * Theme constructor.
+	 * Initialization that the object may need before it is used!
 	 */
 	private function __construct() {
 		$this->load_textdomain();

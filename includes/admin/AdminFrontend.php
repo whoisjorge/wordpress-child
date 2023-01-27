@@ -1,19 +1,18 @@
 <?php
 namespace ThemeName\Admin;
 
-use ThemeName\Core\Instance;
+use ThemeName\Core\Instance as ModuleInstance;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 /**
  * Front-end admin area customizations.
  *
  * @package ThemeName
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-
-class AdminFrontend extends Instance {
+class AdminFrontend extends ModuleInstance {
 	public static function get_instance() {
 		return parent::instance();
 	}
@@ -23,7 +22,7 @@ class AdminFrontend extends Instance {
 	 * @since 1.0.0
 	 * @link https://developer.wordpress.org/reference/functions/remove_menu_page/
 	 */
-	public static function delete_editor_menu_items() {
+	public function delete_editor_menu_items() {
 		remove_menu_page( 'tools.php' );
 		// remove_menu_page('edit.php?post_type=elementor_library');
 		// remove_menu_page('envato-elements');
@@ -35,7 +34,7 @@ class AdminFrontend extends Instance {
 	 * @since 1.0.0
 	 * @link https://developer.wordpress.org/reference/hooks/admin_footer_text/
 	 */
-	public static function footer_text_developed_by() {
+	public function footer_text_developed_by() {
 		$text = sprintf(
 			/* translators: %s: Company URL */
 			__( 'Developed by <a href="%s">Company Name</a>', 'TextDomain' ),
@@ -56,7 +55,7 @@ class AdminFrontend extends Instance {
 	 * @since 1.0.0
 	 * @link https://developer.wordpress.org/reference/hooks/admin_footer/
 	 */
-	public static function footer_text_version() {
+	public function footer_text_version() {
 		$wp_logo    = file_get_contents( THEME_NAME_PATH . '/assets/admin/wordpress.svg' );
 		$wp_version = get_bloginfo( 'version', 'display' );
 
@@ -68,7 +67,7 @@ class AdminFrontend extends Instance {
 	 * @since 1.0.0
 	 * @link https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts/
 	 */
-	public static function enqueue_admin_frontend_style() {
+	public function enqueue_admin_frontend_style() {
 		wp_register_style( 'admin_frontend_css', THEME_NAME_ASSETS_URI . '/admin/admin.css', false, THEME_NAME_VERSION );
 		wp_enqueue_style( 'admin_frontend_css' );
 	}

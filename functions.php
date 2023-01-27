@@ -97,11 +97,33 @@ function TextDomain_fail_wp_version() {
 
 /*
 |--------------------------------------------------------------------------
-| CUSTOM CODE
+| 👻 General Theme Functions (customized code tweaks)
 |--------------------------------------------------------------------------
 |
-| Place here your custom classes and functions!
+| Note that PHP does not support function overloading, nor is it possible
+| to undefine or redefine previously-declared functions.
+|
+| https://developer.wordpress.org/themes/basics/theme-functions/
+| https://www.php.net/manual/en/functions.user-defined.php
 |
 */
+
+// Removes the meta "generator" with the WordPress version
+remove_action( 'wp_head', 'wp_generator' );
+
+// Removes the meta tag with the Windows Live Writer manifest
+remove_action( 'wp_head', 'wlwmanifest_link' );
+
+// Registers and enqueues javascript scripts for fast tweaks.
+function TextDomain_enqueue_tweaks_js() {
+	wp_enqueue_script(
+		'tweaks',
+		THEME_NAME_ASSETS_URI . '/js/tweaks.js',
+		array( 'jquery' ),
+		THEME_NAME_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'TextDomain_enqueue_tweaks_js' );
 
 // echo PHP_VERSION;
