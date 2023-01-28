@@ -15,6 +15,14 @@ body {
   overscroll-behavior-y: none;
 }
 
+/*
+Gets rid of the annoying outline for mouse users but preserves it for
+keyboard users, and is ignored by browsers that don’t support :focus-visible.
+*/
+[type='submit']:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* ----------------------------------------------------------------------------
   CSS pseudo-element that applies styles to the part of a document that has
   been highlighted by the user (such as clicking and dragging the mouse across
